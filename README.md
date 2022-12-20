@@ -1,5 +1,5 @@
-# Frontend Mentor - easybank landing page
+# easybank landing page
 
-Final Design: 
+Design: 
 <img src='public/final/desktop.jpg' />
 <hr>

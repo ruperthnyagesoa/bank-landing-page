@@ -1,0 +1,50 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@mixin flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin btn {
+  border: none;
+  border-radius: 50px;
+  padding: .7rem 1.5rem;
+  color: $white;
+  font-weight: 700;
+  background: linear-gradient(90deg, $lime-Green 15%, $bright-Cyan ) ;
+  cursor: pointer;
+  transition: $transition;
+  &:hover {
+    opacity: .8;
+  }
+}
+@mixin container($width) {
+  width: $width;
+  @include flex-center;
+} 
+@mixin containerSection ($color) {
+  padding: 0 3rem;
+  @include flex-center;
+  background-color: $color;
+ 
+}
+@mixin title ($size, $weight){
+  font-weight: $weight;
+  color: $dark-blue;
+  font-size: $size;
+  margin: 0;
+}
+@mixin parag {
+  color: $grayish-blue;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}

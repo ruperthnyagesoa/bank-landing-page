@@ -1,0 +1,76 @@
+.navigation {
+  max-height: 60px;
+  @include flex-around;
+  padding:.5rem 3rem;
+  background-color: $white;
+
+  .active {
+    width: 100%;
+    transition: $transition;
+    padding: 2rem 1rem;
+    transform: translateY(0);
+    position: absolute;
+    top: 0;
+    background-color: $white;
+    @include flex-center;
+    flex-direction: column;
+    z-index: 999;
+
+  }
+  &__ul {
+    @include flex-center;
+    gap: 1rem;
+    transition: $transition;
+  
+    &-li {
+      .link {
+        color: $grayish-blue;
+        font-size: 15px;
+        cursor: pointer;
+        padding-bottom: 1rem;
+        transition: $transition;
+        &:hover {
+          color: $dark-blue;
+          border-bottom: 3px solid $lime-Green;
+        }
+        @media (min-width: 375px) and (max-width: 768px) {
+          padding-bottom: .2rem;
+        }
+      }
+    }
+    @media (min-width: 375px) and (max-width: 768px) {
+      transform: translateY(-800px);
+      position: absolute;
+    }
+  }
+  .navigation__containerCard--button {
+    @include btn;
+    @media (min-width: 375px) and (max-width: 768px) {
+      transform: translateY(-800px);
+    }
+  }
+  .burguer {
+    background-color: transparent;
+    border: none;
+    z-index: 99999;
+    cursor: pointer;
+  }
+  img {
+    padding-left: 3rem;
+    @media (min-width: 375px) and (max-width: 768px) {
+      padding: 0; 
+       }
+  }
+  @media (min-width: 375px) and (max-width: 768px) {
+    padding: .5rem 0;
+    justify-content: space-around;
+  }
+}
+.sr-only {
+  display: none;
+}
+@media (min-width:768px) {
+  .burguer {
+    display: none;
+  }    
+}

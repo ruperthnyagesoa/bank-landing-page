@@ -1,0 +1,58 @@
+.section-why {
+  @include containerSection($light-grayish-blue);
+  flex-direction: column;
+  align-items: flex-start;
+  @media (min-width: 375px) and (max-width: 768px) {
+    align-items: center;
+  }
+  .container__text {
+    width: 50%;
+    @include flex-start;
+    flex-direction: column;
+    margin-top: 5rem;
+    @media (min-width: 375px) and (max-width: 768px) {
+      text-align: center;
+    }
+    &-title {
+      @include title(2.25rem, 300);
+      @media (min-width: 375px) and (max-width: 768px) {
+        font-size: 1.8rem;
+      }
+     }
+    &-parag {
+      @include parag;
+      padding-left: 10.5rem;
+      margin-bottom: 3.5rem;
+      @media (min-width: 375px) and (max-width: 768px) {
+        padding: 0;
+      }
+     }
+  }
+ .container__cards {
+  width: 100%;
+  @include flex-center;
+  gap: 1.8rem;
+  margin-bottom: 5rem;
+  @media (min-width: 375px) and (max-width: 768px) {
+    flex-direction: column;
+  }
+  .card {
+    width: 250px;
+    &-title {
+      @include title(1.5rem, 400);
+    }
+    &-parag {
+      @include parag;
+      font-size: 15px;
+      margin-top: 1.5rem;
+    }
+    &-icon {
+      width: 80px;
+      img {
+        width: 55px;
+        margin-bottom: 1.8rem;
+      }
+    }
+  }
+ }
+}

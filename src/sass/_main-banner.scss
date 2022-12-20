@@ -1,0 +1,62 @@
+.main-banner {
+  @include containerSection($very-light-gray);
+  @media (min-width: 375px) and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column-reverse;
+    padding: 0;
+
+  }
+  
+  .container {
+    @include container(50%);
+    @media (min-width: 375px) and (max-width: 768px) {
+      width: 100%;
+    }
+    
+    &__text {
+      width: 50%;
+      flex-direction: column;
+
+      &-parag {
+       @include parag;
+
+      }
+      @media (min-width: 375px) and (max-width: 768px) {
+        text-align: center;
+        width: 50%;
+        padding-bottom: 2rem;
+      }
+    }
+    &__img {
+      position: relative;
+      @media (min-width: 375px) and (max-width: 768px) {
+        width: 100%;
+      }
+      &-img {
+        width: 100%;
+        @media (min-width: 375px) and (max-width: 768px) {
+          width: 80%;
+        }
+      }
+      &-mockup {
+        width: 80%;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        @media (min-width: 375px) and (max-width: 768px) {
+          width: 50%;
+        }
+      }
+    }
+    .title {
+     @include title(3rem, 300);
+     @media (min-width:375px) and (max-width: 768px) {
+      font-size: 1.25rem;
+    }
+    }
+    
+  }
+  .link {
+    @include btn;
+  }
+}
